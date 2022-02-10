@@ -17,7 +17,7 @@ const GetForm: React.FC = () => {
                 CryptoJS.enc.Utf8
             )
         );
-    }, [encrypted]);
+    }, [encrypted, password]);
 
     const onFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
