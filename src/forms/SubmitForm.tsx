@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import MDEditor from "@uiw/react-md-editor";
 import CryptoJS from "crypto-js";
 import { firestore } from "../libs/firebase";
 import { addDoc, collection } from "firebase/firestore";
+import RichTextEditor from "@mantine/rte";
+import { Button, TextInput } from "@mantine/core";
 
 const SubmitForm: React.FC = () => {
     const [encrypted, setEncrypted] = useState("");
@@ -26,19 +27,18 @@ const SubmitForm: React.FC = () => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <label>Password</label>
-            <br />
-            <input
-                type="text"
+            <TextInput
+                label="Password / Encryption Key"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
             <br />
-            <MDEditor
+            <RichTextEditor
                 value={input}
                 onChange={(value) => setInput(value ?? "")}
             />
-            <button type="submit">Submit</button>
+            <br />
+            <Button type="submit">Submit</Button>
             {id ? <p>Your ID is: {id}</p> : null}
         </form>
     );
