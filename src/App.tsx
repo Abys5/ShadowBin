@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/App.css";
 import SubmitForm from "./forms/SubmitForm";
 import GetForm from "./forms/GetForm";
-import { AppShell, Box, Container, Header, Tabs, Title } from "@mantine/core";
+import { AppShell, Container, Header, Tabs, Title } from "@mantine/core";
 
 const App: React.FC = () => {
     return (
