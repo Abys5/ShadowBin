@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CryptoJS from "crypto-js";
 import { firestore } from "../libs/firebase";
-import { addDoc, collection, FieldValue } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import RichTextEditor from "@mantine/rte";
 import { Button, TextInput } from "@mantine/core";
 import { DatePicker } from "@mantine/dates";
