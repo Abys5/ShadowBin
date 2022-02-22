@@ -37,6 +37,7 @@ const SubmitForm: React.FC = () => {
                 label="Password / Encryption Key"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
             />
             <br />
             <DatePicker
@@ -50,6 +51,14 @@ const SubmitForm: React.FC = () => {
             />
             <br />
             <RichTextEditor
+                controls={[
+                    ["bold", "italic", "underline", "strike", "clean"],
+                    ["h1", "h2", "h3", "h4", "h5", "h6"],
+                    ["unorderedList", "orderedList"],
+                    ["sup", "sub"],
+                    ["alignLeft", "alignCenter", "alignRight"],
+                    ["code", "codeBlock", "blockquote", "link"],
+                ]}
                 value={input}
                 onChange={(value) => setInput(value ?? "")}
             />
